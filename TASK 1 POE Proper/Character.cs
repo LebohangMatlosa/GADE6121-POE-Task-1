@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace TASK_1_POE_Proper
 {
-    class Character : Tile 
+    class Character : Tile
     {
+        public Character()
+        {
+
+        }
     }
 
 }
