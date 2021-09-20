@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TASK_1_POE_Proper
 {
-    class Character : Tile
+        abstract class Character : Tile
     {
         Tile[] Vision = new Tile[4];
         protected int health;
@@ -15,7 +15,7 @@ namespace TASK_1_POE_Proper
 
         public Character(int X, int Y)
         {
-            X
+            
         }
 
         public int MAX_HP

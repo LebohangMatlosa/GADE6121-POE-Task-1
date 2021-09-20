@@ -6,14 +6,29 @@ using System.Threading.Tasks;
 
 namespace TASK_1_POE_Proper
 {
-     abstract class Tile
+
+    public enum TileType
     {
-        protected Tile()
-        {
-        }
+        Character,
+        Hero,
+        Enemy,
+        Gold,
+        Weapon
+
+
+    }
+    abstract class Tile
+    {
+        
         protected int x;
         protected int y;
-
+        protected TileType typeOfTile;
+        protected Tile(int posX, int posY, TileType tileType)
+        {
+            posX = x;
+            posY = y;
+            tileType = typeOfTile;
+        }
 
 
         public int X
@@ -27,16 +42,7 @@ namespace TASK_1_POE_Proper
             get { return y; }
             set { y= value; }
         }
-        public enum TyleType
-        {
-            Character,
-            Hero,
-            Enemy,
-            Gold, 
-            Weapon 
-
-
-        }
+       
         public void Obstacle(int X, int Y)
         {
 
