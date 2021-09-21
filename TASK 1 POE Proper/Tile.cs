@@ -43,7 +43,8 @@ namespace TASK_1_POE_Proper
             set { y= value; }
         }
        
-        public void Obstacle(int X, int Y)
+        
+        public void emptyTile()
         {
 
         }

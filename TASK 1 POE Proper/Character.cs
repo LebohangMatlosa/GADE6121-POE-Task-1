@@ -8,14 +8,16 @@ namespace TASK_1_POE_Proper
 {
         abstract class Character : Tile
     {
-        Tile[] Vision = new Tile[4];
-        protected int health;
-        protected int attack;
+        Tile[] Vision;
+        protected int hp;
+        protected int damage;
         protected int maxHp;
 
-        public Character(int X, int Y)
+        public Character(int posX , int posY, TileType tileType) : base(posX , posY, tileType)
         {
-            
+            posX = X;
+            posY = Y;
+            tileType = typeOfTile;
         }
 
         public int MAX_HP
@@ -25,16 +27,16 @@ namespace TASK_1_POE_Proper
         }
 
 
-        public int Attack
+        public int Damage
         {
-            get { return attack; }
-            set { attack = value; }
+            get { return damage; }
+            set { damage = value; }
         }
 
-        public int Health 
+        public int HP 
         {
-            get { return health; }
-            set { health = value; }
+            get { return hp; }
+            set { hp = value; }
         }
         public enum Movement
         {
@@ -45,7 +47,25 @@ namespace TASK_1_POE_Proper
             Right,
         }
 
+        public virtual void Attack(Character target)
+        {
+            HP = MAX_HP - Damage;
+        }
 
+        public bool isDead()
+        {
+            return true;
+        }
+
+        public virtual bool CheckRange(Character target)
+        {
+            return true;
+        }
+
+        private int DistanceTo(Character target)
+        {
+            
+        }
     }
 
 }
