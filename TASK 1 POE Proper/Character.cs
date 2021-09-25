@@ -13,11 +13,11 @@ namespace TASK_1_POE_Proper
         protected int damage;
         protected int maxHp;
 
-        public Character(int posX , int posY, TileType tileType) : base(posX , posY, tileType)
+        public Character(int posX , int posY, int damage , int hp, int maxHp) : base (posX, posY)
         {
             posX = X;
             posY = Y;
-            tileType = typeOfTile;
+            
         }
 
         public int MAX_HP
@@ -64,8 +64,22 @@ namespace TASK_1_POE_Proper
 
         private int DistanceTo(Character target)
         {
-            
+          
         }
+
+        public void Move(Movement move)
+        {
+           if()
+            {
+
+            }
+        }
+        public abstract Movement ReturnMove(Movement move = 0)
+        {
+
+        }
+
+        public abstract override string ToString();
     }
 
 }

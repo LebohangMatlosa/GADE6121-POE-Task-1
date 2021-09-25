@@ -6,11 +6,35 @@ using System.Threading.Tasks;
 
 namespace TASK_1_POE_Proper
 {
-    class Goblin
+    abstract class Enemy : Character
     {
-        public int gobHealth = 30;
-        int gobAttack = 15;
+        protected Random r = new Random();
+        private string enemyType;
 
 
+        protected Enemy(int posX, int posY, int damage, int hp, int maxHp, string type) : base(posX, posY, damage, hp, maxHp)
+        {
+            posX = X;
+            posY = Y;
+            damage = Damage;
+            hp = HP;
+
+
+        }
+
+      
+
+        public string EnemyType
+        {
+            get { return enemyType; }
+            set { enemyType = value; }
+        }
+
+
+        override public String ToString()
+        {
+            return enemyType + "at" + "["+ X +","+ Y+"]"+"(Amount "+ Damage + " )" ;
+        }
+       
     }
 }

@@ -23,11 +23,11 @@ namespace TASK_1_POE_Proper
         protected int x;
         protected int y;
         protected TileType typeOfTile;
-        protected Tile(int posX, int posY, TileType tileType)
+        protected Tile(int posX, int posY)
         {
             posX = x;
             posY = y;
-            tileType = typeOfTile;
+            
         }
 
 
