@@ -13,26 +13,9 @@ namespace TASK_1_POE_Proper
         protected int damage;
         protected int maxHp;
 
-        public Character(int posX , int posY, TileType tileType) : base(posX , posY, tileType)
-        {
-            posX = X;
-            posY = Y;
-            tileType = typeOfTile;
-        }
-
-        public int MAX_HP
-        {
-            get { return maxHp; }
-            set { maxHp = value; }
-        }
-
-
-        public int Damage
-        {
-            get { return damage; }
-            set { damage = value; }
-        }
-
+        public Character(int posX , int posY, TileType tileType) : base(posX , posY 
+            \
+             
         public int HP 
         {
             get { return hp; }
