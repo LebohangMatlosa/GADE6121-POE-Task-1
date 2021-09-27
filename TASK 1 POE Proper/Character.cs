@@ -13,8 +13,11 @@ namespace TASK_1_POE_Proper
         protected int damage;
         protected int maxHp;
 
-        public Character(int posX , int posY, TileType tileType) : base(posX , posY 
-            \
+        public Character(int posX , int posY, TileType tileType) : base(posX , posY)
+        {
+
+        }
+           
              
         public int HP 
         {
