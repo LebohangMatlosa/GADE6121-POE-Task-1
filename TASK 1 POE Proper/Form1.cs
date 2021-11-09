@@ -20,7 +20,8 @@ namespace TASK_1_POE_Proper
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Map map = new Map(100, 0, 0, 100, 4);
+            
         }
     }
 }
