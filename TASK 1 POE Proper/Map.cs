@@ -14,9 +14,9 @@ namespace TASK_1_POE_Proper
         int mapWidth = 14;
         int mapHeight = 8;
 
-        Random r = new Random(); 
+        Random r = new Random();
 
-
+        protected Random Random_Number_Generator = new Random();
         public Map(int widthMax,  int widthMin, int heightMIn, int heightMax, int gobAmount )
         {
             string[,] mapSize = new string[8, 14];
@@ -24,8 +24,13 @@ namespace TASK_1_POE_Proper
             heightMIn = 5;
             widthMax = 14;
             widthMin = 7;
-            mapHeight = r.Next(5, 9);
-            mapWidth = r.Next(7, 15);
+            mapHeight = Random_Number_Generator.Next(heightMIn, heightMax);
+
+            mapWidth = Random_Number_Generator.Next(widthMin, widthMax);
+
+            MAPCONTAINER = new Tile[mapWidth, mapHeight];
+            enemies = new List<Enemy>();
+
 
             
 
@@ -43,11 +48,20 @@ namespace TASK_1_POE_Proper
                 }
             }
         }
+        public void Create(TileType typeOfTile, int x = 0, int y = 0)
+        {
+            switch (typeOfTile)
+            {
+                case TileType
+            }
+        }
+        
 
         static void UpdateVision()
         {
-
+            foreach (Enemy E in 
         }
+        private List<Enemy> enemies;
     }
     
 }

@@ -32,6 +32,8 @@ namespace TASK_1_POE_Proper
             Left,
             Right,
         }
+        public enum TileTypev
+                          mn n
 
         public virtual void Attack(Character target)
         {
@@ -51,6 +53,10 @@ namespace TASK_1_POE_Proper
         private int DistanceTo(Character target)
         {
             
+        }
+        public void Move(Movement)
+        {
+            switch()
         }
     }
 

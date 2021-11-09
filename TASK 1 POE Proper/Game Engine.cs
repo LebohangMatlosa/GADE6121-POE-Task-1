@@ -9,4 +9,5 @@ namespace TASK_1_POE_Proper
     class Game_Engine
     {
     }
+    public bool MovePlayer(Move
 }

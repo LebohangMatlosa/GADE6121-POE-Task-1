@@ -6,6 +6,17 @@ using System.Threading.Tasks;
 
 namespace TASK_1_POE_Proper
 {
+    public class Map
+    {
+        private Hero playercharacter;
+
+        public Hero PLAYERCHARACTER
+        {
+            get { return myVar; }
+            set { myVar = value; }
+        }
+
+    }
 
     public enum TileType
     {
@@ -16,6 +27,14 @@ namespace TASK_1_POE_Proper
         Weapon
 
 
+    }
+    public enum MovementDirection
+    {
+        noMovement,
+        Up,
+        Down,
+        Left,
+        Right,
     }
     abstract class Tile
     {
@@ -48,5 +67,6 @@ namespace TASK_1_POE_Proper
         {
 
         }
+
     }
 }
