@@ -13,6 +13,15 @@ namespace TASK_1_POE_Proper
         protected int damage;
         protected int maxHp;
 
+        private int gold;
+
+        public int Gold
+        {
+            get { return gold; }
+            set { gold = value; }
+        }
+
+
         public Character(int posX , int posY, TileType tileType) : base(posX , posY)
         {
 
@@ -32,8 +41,11 @@ namespace TASK_1_POE_Proper
             Left,
             Right,
         }
-        public enum TileTypev
-                          mn n
+        public enum TileType
+        {
+
+        }
+                         
 
         public virtual void Attack(Character target)
         {
@@ -56,8 +68,17 @@ namespace TASK_1_POE_Proper
         }
         public void Move(Movement)
         {
-            switch()
+
         }
+        public void Pickup(item i, int gold)
+        {
+            for(int p = 0; p <gold; p++)
+            {
+                for(int N = 0; N )
+            }
+
+        }
+        
     }
 
 }

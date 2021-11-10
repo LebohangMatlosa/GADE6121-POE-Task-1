@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace TASK_1_POE_Proper
 {
-    public class Map
+    public class Tile 
+
     {
+
         private Hero playercharacter;
 
         public Hero PLAYERCHARACTER
         {
-            get { return myVar; }
-            set { myVar = value; }
+            get { return playercharacter; }
+            set { playercharacter = value; }
         }
 
     }
@@ -24,7 +26,10 @@ namespace TASK_1_POE_Proper
         Hero,
         Enemy,
         Gold,
-        Weapon
+        Weapon,
+        Empty,
+        Barrier,
+        attack,
 
 
     }
@@ -36,7 +41,7 @@ namespace TASK_1_POE_Proper
         Left,
         Right,
     }
-    abstract class Tile
+    abstract class tile
     {
         
         protected int x;
@@ -61,8 +66,23 @@ namespace TASK_1_POE_Proper
             get { return y; }
             set { y= value; }
         }
-       
-        
+        private int enemies;
+
+        public int ENEMIES
+        {
+            get { return enemies; }
+            set { enemies = value; }
+        }
+        private bool typeoftile;
+
+        public bool TYPEOFTILE
+        {
+            get { return typeoftile; }
+            set { typeoftile = value; }
+        }
+
+
+            
         public void emptyTile()
         {
 
