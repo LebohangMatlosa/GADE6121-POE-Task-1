@@ -8,7 +8,7 @@ namespace TASK_1_POE_Proper
 {
     abstract class Items : Tile
     {
-        public Items(int posX, int posY, TileType Item) : base (posX, posY, Item)
+        public Items(int posX, int posY, TileType Item, int numberOfItems) : base (posX, posY, Item)
         {
             posX = X;
             posY = Y;

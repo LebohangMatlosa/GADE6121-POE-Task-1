@@ -125,10 +125,10 @@ namespace TASK_1_POE_Proper
 
         public void PickUp(Items i)
         {
-            if(i is Gold)
+            if(i is GOLD)
             {
-                Gold gold = i as Gold;
-                goldPurse = goldPurse + gold.GOLD;
+                GOLD gold = i as GOLD;
+                goldPurse = goldPurse + gold.GOLDDROP;
             }
         }
     }

@@ -12,11 +12,11 @@ namespace TASK_1_POE_Proper
         private string enemyType;
 
 
-        protected Enemy(int posX, int posY, int damage, int hp, int maxHp, string type) : base(posX, posY, damage, hp, maxHp)
+        protected Enemy(int EnemyX, int EnemyY,TileType enemy ,int enemyDamage, int enemyhp, int enemy_maxHp, string typeOfEnemy) : base(EnemyX, EnemyY,enemy, typeOfEnemy, enemyDamage, enemyhp, enemy_maxHp)
         {
-            posX = X;
-            posY = Y;
-            damage = Damage;
+            EnemyX = X;
+            EnemyY = Y;
+            damage = DAMAGE;
             hp = HP;
 
 
@@ -33,7 +33,7 @@ namespace TASK_1_POE_Proper
 
         override public String ToString()
         {
-            return enemyType + "at" + "["+ X +","+ Y+"]"+"(Amount "+ Damage + " )" ;
+            return enemyType + "at" + "["+ X +","+ Y+"]"+"(Amount "+ DAMAGE + " )" ;
         }
        
     }
