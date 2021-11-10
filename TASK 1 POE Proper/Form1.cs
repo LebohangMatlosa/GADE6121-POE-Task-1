@@ -15,7 +15,11 @@ namespace TASK_1_POE_Proper
         public Form1()
         {
             InitializeComponent();
+
             GM = new Game_Engine();
+
+            RedrawMap();
+            rtbInfo.Text = GM.GAMEMAP.PLAYERCHARACTER.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)

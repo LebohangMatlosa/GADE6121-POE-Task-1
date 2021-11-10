@@ -6,26 +6,16 @@ using System.Threading.Tasks;
 
 namespace TASK_1_POE_Proper
 {
-    public class Map
-    {
-        private Hero playercharacter;
-
-        public Hero PLAYERCHARACTER
-        {
-            get { return myVar; }
-            set { myVar = value; }
-        }
-
-    }
-
+    
     public enum TileType
     {
         Character,
         Hero,
         Enemy,
         Gold,
-        Weapon
-
+        Weapon,
+        Barrier,
+        Empty
 
     }
     public enum MovementDirection
@@ -42,10 +32,11 @@ namespace TASK_1_POE_Proper
         protected int x;
         protected int y;
         protected TileType typeOfTile;
-        protected Tile(int posX, int posY)
+        protected Tile(int posX, int posY, TileType TILETYPE)
         {
-            posX = x;
-            posY = y;
+            posX = X;
+            posY = Y;
+            TILETYPE = TYPEOFTILE;
             
         }
 
@@ -61,8 +52,12 @@ namespace TASK_1_POE_Proper
             get { return y; }
             set { y= value; }
         }
-       
         
+        public TileType TYPEOFTILE
+        {
+            get { return typeOfTile; }
+            set { typeOfTile = value; }
+        }
         public void emptyTile()
         {
 
