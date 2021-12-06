@@ -81,6 +81,18 @@ namespace TASK_1_POE_Proper
         {
 
         }
+        public void Loot()
+        {
+            if(HP==0 && Weapon == false)
+            {
+                
+                Pickup(gold, 3);
+            }
+            else 
+            {
+
+            }
+        }
         public void Pickup(Items i, int gold)
         {
             for(int p = 0; p <gold; p++)
@@ -89,7 +101,7 @@ namespace TASK_1_POE_Proper
                 {
                     if (TileType.Hero != TileType.Gold)
                     {
-                        gold = Gold;
+                        i = Gold;
                     }
                     else if (TileType.Hero == TileType.Weapon)
                     {
