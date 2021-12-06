@@ -81,9 +81,9 @@ namespace TASK_1_POE_Proper
             get { return enemies; }
             set { enemies = value; }
         }
-        private bool typeoftile;
+        private TileType typeoftile;
 
-        public bool TYPEOFTILE
+        public TileType TYPEOFTILE
         {
             get { return typeoftile; }
             set { typeoftile = value; }

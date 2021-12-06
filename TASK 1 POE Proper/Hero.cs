@@ -8,7 +8,7 @@ namespace TASK_1_POE_Proper
 {
     class Hero : Character
     {
-        public Hero(int posX, int posY, int damage, int hp, int maxHp) : base(posX, posY, damage, hp, maxHp)
+        public Hero(int posX, int posY,string hero, int damage, int hp, int maxHp) : base(posX, posY, damage, hp, maxHp)
         {
             
             maxHp = MAX_HP;
