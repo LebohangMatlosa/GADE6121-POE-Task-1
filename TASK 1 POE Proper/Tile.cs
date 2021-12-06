@@ -9,6 +9,14 @@ namespace TASK_1_POE_Proper
     public class Tile 
 
     {
+        private int damage;
+
+        public int DAMAGE
+        {
+            get { return damage; }
+            set { damage = value; }
+        }
+
 
         private Hero playercharacter;
 
@@ -67,7 +75,7 @@ namespace TASK_1_POE_Proper
             set { y= value; }
         }
         private int enemies;
-
+        
         public int ENEMIES
         {
             get { return enemies; }

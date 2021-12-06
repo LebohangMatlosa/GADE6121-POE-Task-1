@@ -16,6 +16,12 @@ namespace TASK_1_POE_Proper
         {
             InitializeComponent();
             GM = new Game_Engine();
+            List<Tile> tile = new List<Tile>();
+            weapon LongSword = new weapon();
+            weapon Dagger = new weapon();
+
+
+            
            
         }
 
