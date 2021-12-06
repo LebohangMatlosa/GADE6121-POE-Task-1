@@ -108,7 +108,7 @@ namespace TASK_1_POE_Proper
                 MeleeWeapon Dagger = new MeleeWeapon();
 
                 longSword.Range = 1;
-                Dagger.Range = 1
+                Dagger.Range = 1;
 
                 Random r = new Random();
                 int x = longSword;
