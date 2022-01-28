@@ -105,13 +105,14 @@ namespace TASK_1_POE_Proper
             public static void Weapon(int Y, int x)
             {
                 MeleeWeapon longSword = new MeleeWeapon();
-                MeleeWeapon Dagger = new MeleeWeapon();
+                MeleeWeapon Dagger = new MeleeWeapon(); 
 
                 longSword.Range = 1;
                 Dagger.Range = 1;
 
                 Random r = new Random();
                 int x = longSword;
+                
                 int Y = Dagger;
                 r.Next(x, Y);
 

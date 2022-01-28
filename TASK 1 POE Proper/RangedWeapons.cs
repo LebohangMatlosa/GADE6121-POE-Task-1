@@ -44,7 +44,7 @@ namespace TASK_1_POE_Proper
         public override int Range()
         {
             return base.Range = RANGE;
-        }
+        } 
 
     }
     

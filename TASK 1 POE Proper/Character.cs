@@ -77,6 +77,7 @@ namespace TASK_1_POE_Proper
                 for(int N = 0; N )
             }
 
+            for(int u = 0; u < gold )
         }
         
     }
