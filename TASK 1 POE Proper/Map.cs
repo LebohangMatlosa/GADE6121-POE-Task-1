@@ -45,8 +45,9 @@ namespace TASK_1_POE_Proper
         }
 
 
-        public Map(int widthMax,  int widthMin, int heightMIn, int heightMax, int enemyAmount, int goblin, int mage, int goldOnMap )
+        public Map(int widthMax,  int widthMin, int heightMIn, int heightMax, int enemyAmount, int goblin, int mage, int goldOnMap, int weaponDrops )
         {
+            Items[,] item = new Items[goldOnMap, weaponDrops];
             string[,] mapSize = new string[8, 14];
             heightMax = 10;
             heightMIn = 5;
@@ -60,9 +61,10 @@ namespace TASK_1_POE_Proper
             enemies = new List<Enemy>();
             mage = 4;
             goblin = 5;
+            Leader leader = new Leader(LeaderHp, LeaderDamage, X, Y, leaderTargets, leadertargets);
+            leader = 1;
 
-
-            enemies = Random_Number_Generator.Next(goblin, mage);
+            enemies = Random_Number_Generator.Next(goblin, mage , leader);
 
 
             
@@ -106,6 +108,13 @@ namespace TASK_1_POE_Proper
                     Create(TileType.Enemy);   
                 }
             }
+            Create(TileType.Enemy);
+            {
+                for (int e = 0; e < gobAmount; e++)
+                {
+                    Leader Leader = new Leader(20, 2, X ,Y,leadertargets, leaderTargets);
+                }
+            }
             
             {
                 for(int w = 0; w < 10; w++)
@@ -147,7 +156,7 @@ namespace TASK_1_POE_Proper
                 case TileType.Hero:
                     int HeroX = Random_Number_Generator.Next(0, MAPWIDTH);
                     int HeroY = Random_Number_Generator.Next(0, MAPHEIGHT);
-                    
+                    break;
                     while(MAPCONTAINER[HeroX, HeroY].TYPEOFTILE ! = TileType.Empty)
                     {
                          HeroX = Random_Number_Generator.Next(0, MAPWIDTH);
@@ -156,8 +165,10 @@ namespace TASK_1_POE_Proper
                     }
 
                     Hero NewHero = new Hero(HeroX, HeroY, "H", 100, 100, 10);
-                    PLAYERCHARACTER = NewHero; 
-                    MAPCONTAINER[HeroX, HeroY] = NewHero
+                    PLAYERCHARACTER = NewHero;
+                    MAPCONTAINER[HeroX, HeroY] = NewHero;
+
+                    
              
             }
         static void UpdateVision()

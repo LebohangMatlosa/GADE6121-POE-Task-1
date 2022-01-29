@@ -12,17 +12,31 @@ namespace TASK_1_POE_Proper
         protected int hp;
         protected int damage;
         protected int maxHp;
+        protected int distance;
+        private GOLD gold;
+        
 
-        private int gold;
-
-        public int Gold
+        public GOLD Gold
         {
             get { return gold; }
             set { gold = value; }
         }
+        private weapon Weapon;
+
+        public weapon WEAPON
+        {
+            get { return Weapon; }
+            set { Weapon = value; }
+        }
 
 
-        public Character(int posX , int posY, TileType tileType) : base(posX , posY)
+        public int Distance
+        {
+            get { return distance; }
+            set { distance = value; }
+        }
+
+        public Character(int posX , int posY, TileType tileType) : base(posX , posY, tileType)
         {
 
         }
@@ -41,10 +55,7 @@ namespace TASK_1_POE_Proper
             Left,
             Right,
         }
-        public enum TileType
-        {
-
-        }
+        
                          
 
         public virtual void Attack(Character target)
@@ -64,17 +75,43 @@ namespace TASK_1_POE_Proper
 
         private int DistanceTo(Character target)
         {
-            
+            return Distance; 
         }
-        public void Move(Movement)
+        public void Move(Movement e)
         {
 
         }
-        public void Pickup(item i, int gold)
+        public void Loot()
+        {
+            if(HP==0 && Weapon == false)
+            {
+                
+                Pickup(gold, 3);
+            }
+            else 
+            {
+                
+            }
+        }
+        public void Pickup(Items i, int gold)
         {
             for(int p = 0; p <gold; p++)
             {
-                for(int N = 0; N )
+                for (int N = 0; N > gold; N++)
+                {
+                    if (TileType.Hero != TileType.Gold)
+                    {
+                        i = Gold;
+                    }
+                    else if (TileType.Hero == TileType.Weapon)
+                    {
+                        private void Equip(weapon w)
+                        {
+                            w = WEAPON;
+                        }
+                    }
+                }
+
             }
 
             for(int u = 0; u < gold )

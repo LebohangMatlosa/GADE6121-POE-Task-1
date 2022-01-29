@@ -10,7 +10,7 @@ namespace TASK_1_POE_Proper
     {
         private int LeaderTargets;
 
-        public Leader(int LeaderHp, int LeaderDamage, int X, int Y, int leaderTargets, int leadertargets )
+        public Leader(int LeaderHp, int LeaderDamage, int X, int Y, int leaderTargets, int leadertargets, weapon longSword)
         {
             LeaderTargets = leaderTargets;
             this.leadertargets = leadertargets;
@@ -35,23 +35,23 @@ namespace TASK_1_POE_Proper
             return base.GetHashCode();
         }
 
-        public override string ReturnMove(Movement)
+        public override string ReturnMove(Movement movement)
         {
-            if(MovementDirection = MovementDirection.Up)
+            if(MovementDirection == MovementDirection.Up)
             {
                 return base.Movement = 1; 
             }
-            if(MovementDirection = MovementDirection.Down)
+            if(MovementDirection == MovementDirection.Down)
             {
                 return base.Movement = 2;              
             }
-            if (MovementDirection = MovementDirection.Left)
+            if (MovementDirection == MovementDirection.Left)
             {
                 return base.Movement = 3;
             }
             if (MovementDirection = MovementDirection.Right)
             {
-                return base.Movement = 4;
+                return base.movement = 4;
             }
 
         }

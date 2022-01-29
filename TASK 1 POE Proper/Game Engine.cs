@@ -36,11 +36,12 @@ namespace TASK_1_POE_Proper
         Down,
         Left,
         Right,
+    }
     public void EnemyMovement(string hero, string gobl)
     {
         if(hero.movement = false)
         {
-            G
+            
         }
     }
 }
